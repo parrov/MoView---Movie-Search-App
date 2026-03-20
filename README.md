@@ -8,7 +8,7 @@ Built with a focus on performance, UX, and clean architecture, this project demo
 
 ## 🚀 Live Demo
 
-👉 
+👉 https://moviewsite.netlify.app/
 
 ---
 
