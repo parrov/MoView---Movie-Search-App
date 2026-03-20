@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# 🎬 MoView — Movie Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MoView is a modern and responsive movie search application that allows users to discover, explore, and save their favorite movies in real time.
 
-Currently, two official plugins are available:
+Built with a focus on performance, UX, and clean architecture, this project demonstrates real-world frontend techniques such as state management, API optimization, and scalable UI patterns.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+👉 https://your-deploy-link.vercel.app
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 🔍 **Real-time Movie Search**
+  - Search movies instantly using TMDb API
+  - Debounced input to reduce API calls
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- 🎞️ **Movie Details**
+  - View overview, rating, release date, and runtime
+  - Watch official trailers (YouTube integration)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- ⭐ **Favorites System**
+  - Add/remove movies from favorites
+  - Persisted using localStorage
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- 🔄 **Infinite Scroll**
+  - Seamless pagination with Intersection Observer
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- ⚡ **Optimized API Calls**
+  - Request cancellation (AbortController)
+  - In-memory caching
+  - Deduplication of concurrent requests
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- 🎨 **Modern UI/UX**
+  - Skeleton loading (Netflix-style)
+  - Smooth animations and transitions
+  - Responsive design
+
+- 🎛️ **Filtering & Sorting**
+  - Sort by title (A–Z / Z–A)
+  - Filter by rating and release date
+
+- ⬆️ **Scroll Progress + Back to Top**
+  - Persistent floating button with scroll progress indicator
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React + TypeScript
+- **State Management:** Zustand
+- **Styling:** TailwindCSS
+- **HTTP Client:** Axios
+- **API:** TMDb (The Movie Database)
+- **Routing:** React Router
+- **Icons:** Heroicons
+
+---
+
+## 🧠 Architecture Highlights
+
+This project follows a modular and scalable structure:
+
+
+### Key Patterns Used:
+
+- Global state with Zustand
+- Service layer for API abstraction
+- Schema validation for API responses
+- Separation of concerns (UI vs logic)
+
+---
+
+## ⚙️ Installation
+
+# Clone the repository
+git clone https://github.com/parrov/MoView---Movie-Search-App.git
+
+# Navigate into the project
+cd MoView---Movie-Search-App
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
