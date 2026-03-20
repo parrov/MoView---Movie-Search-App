@@ -44,10 +44,12 @@ export default function MovieDetails() {
   return (
     <div className='relative h-screen'>
       <div className='container mx-auto mt-6'>
-        <SelectedMovieDetails
-          movie={movieDetails}
-          trailer={movieTrailer}
-        />
+        {movieDetails && (
+          <SelectedMovieDetails
+            movie={movieDetails}
+            trailer={movieTrailer}
+          />
+        )}
       </div>
     </div>
   );

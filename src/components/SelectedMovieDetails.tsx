@@ -46,11 +46,11 @@ export default function SelectedMovieDetails({
         <div className='absolute inset-0 bg-linear-to-l from-black/60 via-black to-surface '></div>
 
         <div className='bg-linear-to-r from-surface to-surface/25 backdrop-blur-xs rounded-2xl shadow-2xl overflow-hidden grid md:grid-cols-[300px_1fr] w-full md:max-h-[60vh]'>
-          <div className='h-105 md:h-full'>
+          <div className='h-110 md:h-full'>
             <img
               src={`${imgUrl}${movie.poster_path}`}
               alt={`${movie.title} poster`}
-              className='w-full h-full object-cover'
+              className='w-full h-full object-fill md:object-cover'
             />
           </div>
 

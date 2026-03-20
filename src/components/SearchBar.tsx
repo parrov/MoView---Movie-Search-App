@@ -31,12 +31,14 @@ export default function SearchBar() {
   return (
     <div className='text-text-primary text-center border-b border-background-secondary py-22 px-4'>
       <div className='container mx-auto'>
-        <h1 className='text-5xl font-heading font-bold mb-6'>
-          Discover everything about your favorites movies
-        </h1>
-        <p className='text-text-secondary text-2xl'>
-          Search and explore millions of movies.
-        </p>
+        <div className='md:w-[65%] mx-auto'>
+          <h1 className='text-4xl font-heading font-bold mb-4 md:text-5xl'>
+            Discover everything about your favorites movies
+          </h1>
+          <p className='text-text-secondary text-lg md:text-2xl'>
+            Search and explore millions of movies.
+          </p>
+        </div>
 
         <div className='w-full flex justify-center mt-8'>
           <form
